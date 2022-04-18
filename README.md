@@ -5,12 +5,7 @@ This tool will take an Excel model (.xlsx), update any parameters as defined via
 Parameters that define how to update cells in your spreadsheet can be provided in three ways: 
 JSON file, CSV file, or command line arguments
 
-If both a config file and command line arguments are provided, the command line arguments 
-
-
-### Config file formatting
-
-Only one config file can be provided at a time. The config file can either be 
+If both a config file and command line arguments are provided, the command line arguments take precedence over the parameters in the config files.
 
 #### Command line arguments:
 
@@ -24,6 +19,10 @@ Example:
 ```
 xlsxecute -f "Variables.C2=red" -f Variables.C3=0.8 sample.xlsx
 ```
+
+### Config file formatting
+
+Only one config file can be provided at a time. The config file can either be formatted as JSON or CSV (useful if you need to export directly from Pandas or a similar data processing flow).
 
 #### JSON:
 ```json
